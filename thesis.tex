@@ -1,0 +1,117 @@
+%% See 'tutorial.pdf'
+\documentclass
+    [phd,
+     smplmath]
+    {iitmdissertation}
+
+%\documentclass[openany]{book}
+
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage{url}
+\usepackage{hyperref}
+\definecolor{dkgreen}{rgb}{0,0,0.6}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\bibliographystyle{plainurl}
+
+\hypersetup{
+colorlinks = true,
+linkcolor = black,
+filecolor = black,
+urlcolor = black,
+}
+
+\urlstyle{same}
+\hypersetup{citecolor=black}
+
+
+\lstdefinestyle{java}{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\lstdefinestyle{grammar}{
+basicstyle={\small\sffamily},
+  xleftmargin=1em,
+  columns = fullflexible
+  literate={->}{$\rightarrow$}{2}
+           {α}{$\alpha$}{1}
+           {δ}{$\delta$}{1}
+}
+
+\lstdefinestyle{keywords}
+{
+basicstyle=\ttfamily,
+  columns=fullflexible,
+  xleftmargin=0cm,
+  breaklines=true,
+  postbreak=\space,
+}
+
+\dissertationDepartment      {Department of Computer Science}
+\dissertationAuthorName      {Venkata Sai Surya Prakash Sanagala}
+\dissertationDateOfBirth     {27 August 2000}
+\dissertationDegree          {Master of Technology}
+\dissertationTitle           {Optimizing Java Collection Class Accesses}
+\dissertationMonth           {May}
+\dissertationYear            {2023}
+\dissertationCertificateDate {May 2023}
+\dissertationType            {MTP Report}
+\dissertationGuides          {Dr. V Krishna Nandivada}
+\dissertationCommitteeName   {Doctoral Committee}
+%\dissertationImage           {tux.png}
+
+\setupGlossaryAbbreviationsDefinitions
+\begin{document}
+  \prematter
+      %\input 0-prematter/pre-quote
+      %\input 0-prematter/pre-dedication
+      \printCertificate
+      %\input 0-prematter/pre-list-of-publications
+%%
+%%
+%%
+  \begin{FrontMatter}
+      %\printGlossaryAndAbbreviations
+      %\printNotation
+  \end{FrontMatter}
+%%
+%%
+%%
+  \begin{MainMatter}
+      \input 2-mainmatter/chapters/chap-introduction
+      \input 2-mainmatter/chapters/chap-lists
+      \input 2-mainmatter/chapters/chap-ccap
+      \input 2-mainmatter/chapters/chap-implementation
+      \input 2-mainmatter/chapters/chap-conclusion
+
+      %\appendix
+      %\input 2-mainmatter/appendices/appn-general-notes
+  \end{MainMatter}
+%%
+%%
+%%
+
+  \begin{BackMatter}
+    \let\cleardoublepage\clearpage
+      \printBibliographyReferences{references.bib}
+  \end{BackMatter}
+ 
+\end{document}
